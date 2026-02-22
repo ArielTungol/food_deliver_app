@@ -1,0 +1,70 @@
+name: food_delivery_app
+description: A mock food delivery app with Cupertino design
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Cupertino Icons - for iOS-style icons
+  cupertino_icons: ^1.0.6
+
+  # Local Database - Hive for storing data locally
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Local Authentication - for Face ID / Touch ID
+  local_auth: ^2.1.7
+
+  # WebView - for Xendit payment page
+  webview_flutter: ^4.4.2
+  webview_flutter_android: ^3.12.1
+  webview_flutter_wkwebview: ^3.9.1
+
+  # HTTP - for API calls to Xendit and Geoapify
+  http: ^1.1.0
+
+  # For pathfinding calculations
+  collection: ^1.18.0
+
+  # For device information and permissions
+  geolocator: ^10.1.0
+
+  # Flutter Map packages
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Hive Generator - for generating type adapters
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+
+  # Launcher Icons - for app icon
+  flutter_launcher_icons: ^0.13.1
+
+  # For testing
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  # Assets section - for images and icons
+  assets:
+    - assets/images/
+    - assets/icons/
+
+# App icon configuration
+flutter_launcher_icons:
+  ios: true
+  android: true
+  image_path: "assets/icons/app_icon.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icons/app_icon_foreground.png"
