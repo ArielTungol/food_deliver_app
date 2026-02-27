@@ -600,7 +600,7 @@ class _LoginScreenState extends State<LoginScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              CupertinoColors.activeOrange.withOpacity(0.05),
+              CupertinoColors.activeOrange.withValues(alpha: 0.05),
               const Color(0xFFF2F2F7),
             ],
           ),
@@ -666,7 +666,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         placeholder: "Enter your username",
                         placeholderStyle: TextStyle(
-                          color: CupertinoColors.systemGrey.withOpacity(0.5),
+                          color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                           fontSize: 16,
                         ),
                         padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
@@ -719,7 +719,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         placeholder: "Enter your password",
                         placeholderStyle: TextStyle(
-                          color: CupertinoColors.systemGrey.withOpacity(0.5),
+                          color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                           fontSize: 16,
                         ),
                         obscureText: hidePassword,
@@ -771,7 +771,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           borderRadius: BorderRadius.circular(14),
                           boxShadow: [
                             BoxShadow(
-                              color: CupertinoColors.activeOrange.withOpacity(0.3),
+                              color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
                               blurRadius: 12,
                               offset: const Offset(0, 4),
                             ),
@@ -967,7 +967,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              CupertinoColors.activeOrange.withOpacity(0.05),
+              CupertinoColors.activeOrange.withValues(alpha: 0.05),
               const Color(0xFFF2F2F7),
             ],
           ),
@@ -1034,7 +1034,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           placeholder: "Choose a username",
                           placeholderStyle: TextStyle(
-                            color: CupertinoColors.systemGrey.withOpacity(0.5),
+                            color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                             fontSize: 16,
                           ),
                           padding: const EdgeInsets.fromLTRB(12, 4, 12, 12),
@@ -1087,7 +1087,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           placeholder: "Create a password",
                           placeholderStyle: TextStyle(
-                            color: CupertinoColors.systemGrey.withOpacity(0.5),
+                            color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                             fontSize: 16,
                           ),
                           obscureText: hidePassword,
@@ -1157,7 +1157,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           placeholder: "Confirm your password",
                           placeholderStyle: TextStyle(
-                            color: CupertinoColors.systemGrey.withOpacity(0.5),
+                            color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                             fontSize: 16,
                           ),
                           obscureText: hideConfirmPassword,
@@ -1207,7 +1207,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(14),
                       boxShadow: [
                         BoxShadow(
-                          color: CupertinoColors.activeOrange.withOpacity(0.3),
+                          color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
                           blurRadius: 12,
                           offset: const Offset(0, 4),
                         ),
@@ -1305,7 +1305,7 @@ class _HomeScreenState extends State<HomeScreen> {
         inactiveColor: CupertinoColors.systemGrey,
         border: Border(
           top: BorderSide(
-            color: CupertinoColors.systemGrey5.withOpacity(0.5),
+            color: CupertinoColors.systemGrey5.withValues(alpha: 0.5),
             width: 1,
           ),
         ),
@@ -1439,7 +1439,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
         backgroundColor: CupertinoColors.white,
         border: Border(
           bottom: BorderSide(
-            color: CupertinoColors.systemGrey5.withOpacity(0.5),
+            color: CupertinoColors.systemGrey5.withValues(alpha: 0.5),
             width: 1,
           ),
         ),
@@ -1490,7 +1490,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              CupertinoColors.activeOrange.withOpacity(0.05),
+              CupertinoColors.activeOrange.withValues(alpha: 0.05),
               const Color(0xFFF2F2F7),
             ],
           ),
@@ -1561,7 +1561,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                               shape: BoxShape.circle,
                               color: _currentPage == index
                                   ? CupertinoColors.activeOrange
-                                  : CupertinoColors.systemGrey.withOpacity(0.3),
+                                  : CupertinoColors.systemGrey.withValues(alpha: 0.3),
                             ),
                           ),
                         ),
@@ -1570,9 +1570,6 @@ class _FoodListScreenState extends State<FoodListScreen> {
                   ),
                 ),
               ),
-
-
-
 
               // Popular Items Header
               SliverToBoxAdapter(
@@ -1640,7 +1637,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
         ),
         boxShadow: [
           BoxShadow(
-            color: CupertinoColors.activeOrange.withOpacity(0.3),
+            color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
             blurRadius: 12,
             offset: const Offset(0, 6),
           ),
@@ -1661,7 +1658,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
-                          color: CupertinoColors.white.withOpacity(0.2),
+                          color: CupertinoColors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Text(
@@ -1688,7 +1685,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                         item.description,
                         style: TextStyle(
                           fontSize: 12,
-                          color: CupertinoColors.white.withOpacity(0.9),
+                          color: CupertinoColors.white.withValues(alpha: 0.9),
                         ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -1726,7 +1723,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                             '${item.preparationTime} min',
                             style: TextStyle(
                               fontSize: 12,
-                              color: CupertinoColors.white.withOpacity(0.9),
+                              color: CupertinoColors.white.withValues(alpha: 0.9),
                             ),
                           ),
                         ],
@@ -1758,7 +1755,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                         width: 80,
                         height: 80,
                         decoration: BoxDecoration(
-                          color: CupertinoColors.white.withOpacity(0.2),
+                          color: CupertinoColors.white.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: const Icon(
@@ -1819,7 +1816,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: CupertinoColors.systemGrey.withOpacity(0.1),
+            color: CupertinoColors.systemGrey.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),
@@ -1837,7 +1834,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                 errorBuilder: (context, error, stackTrace) {
                   // Fallback if image fails to load
                   return Container(
-                    color: CupertinoColors.activeOrange.withOpacity(0.1),
+                    color: CupertinoColors.activeOrange.withValues(alpha: 0.1),
                     child: Center(
                       child: Icon(
                         CupertinoIcons.cart,
@@ -1859,7 +1856,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      Colors.black.withOpacity(0.7),
+                      Colors.black.withValues(alpha: 0.7),
                     ],
                   ),
                 ),
@@ -1920,7 +1917,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: CupertinoColors.black.withOpacity(0.5),
+                          color: CupertinoColors.black.withValues(alpha: 0.5),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
@@ -2163,7 +2160,7 @@ class _CartScreenState extends State<CartScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              CupertinoColors.activeOrange.withOpacity(0.05),
+              CupertinoColors.activeOrange.withValues(alpha: 0.05),
               const Color(0xFFF2F2F7),
             ],
           ),
@@ -2184,7 +2181,7 @@ class _CartScreenState extends State<CartScreen> {
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
-                              color: CupertinoColors.systemGrey.withOpacity(0.1),
+                              color: CupertinoColors.systemGrey.withValues(alpha: 0.1),
                               blurRadius: 20,
                               offset: const Offset(0, 10),
                             ),
@@ -2237,7 +2234,7 @@ class _CartScreenState extends State<CartScreen> {
                               width: 50,
                               height: 50,
                               decoration: BoxDecoration(
-                                color: CupertinoColors.activeOrange.withOpacity(0.1),
+                                color: CupertinoColors.activeOrange.withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Icon(
@@ -2308,7 +2305,7 @@ class _CartScreenState extends State<CartScreen> {
                     color: CupertinoColors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: CupertinoColors.systemGrey.withOpacity(0.2),
+                        color: CupertinoColors.systemGrey.withValues(alpha: 0.2),
                         blurRadius: 10,
                         offset: const Offset(0, -5),
                       ),
@@ -2339,7 +2336,7 @@ class _CartScreenState extends State<CartScreen> {
                                       controller: _searchController,
                                       placeholder: 'Search for places, restaurants, landmarks...',
                                       placeholderStyle: TextStyle(
-                                        color: CupertinoColors.systemGrey.withOpacity(0.5),
+                                        color: CupertinoColors.systemGrey.withValues(alpha: 0.5),
                                         fontSize: 14,
                                       ),
                                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -2606,7 +2603,7 @@ class _CartScreenState extends State<CartScreen> {
                                         Container(
                                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                           decoration: BoxDecoration(
-                                            color: CupertinoColors.systemOrange.withOpacity(0.1),
+                                            color: CupertinoColors.systemOrange.withValues(alpha: 0.1),
                                             borderRadius: BorderRadius.circular(12),
                                           ),
                                           child: const Text(
@@ -2696,7 +2693,7 @@ class _CartScreenState extends State<CartScreen> {
                           boxShadow: _locationPicked
                               ? [
                             BoxShadow(
-                              color: CupertinoColors.activeOrange.withOpacity(0.3),
+                              color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
                               blurRadius: 8,
                               offset: const Offset(0, 2),
                             ),
@@ -2984,7 +2981,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              CupertinoColors.activeOrange.withOpacity(0.05),
+              CupertinoColors.activeOrange.withValues(alpha: 0.05),
               const Color(0xFFF2F2F7),
             ],
           ),
@@ -3064,7 +3061,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: CupertinoColors.activeOrange.withOpacity(0.1),
+                      color: CupertinoColors.activeOrange.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: const Icon(
@@ -3100,7 +3097,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: CupertinoColors.activeOrange.withOpacity(0.1),
+                          color: CupertinoColors.activeOrange.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const Icon(
@@ -3125,7 +3122,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 // Divider
                 Container(
                   height: 1,
-                  color: CupertinoColors.systemGrey5.withOpacity(0.5),
+                  color: CupertinoColors.systemGrey5.withValues(alpha: 0.5),
                 ),
 
                 // Xendit Option
@@ -3139,7 +3136,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: _selectedPaymentMethod == 'xendit'
-                          ? CupertinoColors.activeOrange.withOpacity(0.05)
+                          ? CupertinoColors.activeOrange.withValues(alpha: 0.05)
                           : Colors.transparent,
                     ),
                     child: Row(
@@ -3173,7 +3170,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: CupertinoColors.activeOrange.withOpacity(0.1),
+                            color: CupertinoColors.activeOrange.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Row(
@@ -3241,11 +3238,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       color: _selectedPaymentMethod == 'cod'
-                          ? CupertinoColors.systemGreen.withOpacity(0.05)
+                          ? CupertinoColors.systemGreen.withValues(alpha: 0.05)
                           : Colors.transparent,
                       border: Border(
                         top: BorderSide(
-                          color: CupertinoColors.systemGrey5.withOpacity(0.5),
+                          color: CupertinoColors.systemGrey5.withValues(alpha: 0.5),
                           width: 1,
                         ),
                       ),
@@ -3281,7 +3278,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Container(
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                            color: CupertinoColors.systemGreen.withOpacity(0.1),
+                            color: CupertinoColors.systemGreen.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: const Icon(
@@ -3333,10 +3330,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
           if (_selectedPaymentMethod == 'xendit') ...[
             Container(
               decoration: BoxDecoration(
-                color: CupertinoColors.activeOrange.withOpacity(0.05),
+                color: CupertinoColors.activeOrange.withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
-                  color: CupertinoColors.activeOrange.withOpacity(0.3),
+                  color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
                   width: 1,
                 ),
               ),
@@ -3366,10 +3363,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
           ] else if (_selectedPaymentMethod == 'cod') ...[
             Container(
               decoration: BoxDecoration(
-                color: CupertinoColors.systemGreen.withOpacity(0.05),
+                color: CupertinoColors.systemGreen.withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
-                  color: CupertinoColors.systemGreen.withOpacity(0.3),
+                  color: CupertinoColors.systemGreen.withValues(alpha: 0.3),
                   width: 1,
                 ),
               ),
@@ -3420,7 +3417,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       BoxShadow(
                         color: (_selectedPaymentMethod == 'xendit'
                             ? CupertinoColors.activeOrange
-                            : CupertinoColors.systemGreen).withOpacity(0.3),
+                            : CupertinoColors.systemGreen).withValues(alpha: 0.3),
                         blurRadius: 12,
                         offset: const Offset(0, 4),
                       ),
@@ -3494,8 +3491,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: _selectedPaymentMethod == 'cod'
-                        ? CupertinoColors.systemGreen.withOpacity(0.1)
-                        : CupertinoColors.activeOrange.withOpacity(0.1),
+                        ? CupertinoColors.systemGreen.withValues(alpha: 0.1)
+                        : CupertinoColors.activeOrange.withValues(alpha: 0.1),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
@@ -3538,7 +3535,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
-                    color: _getPaymentMethodColor().withOpacity(0.1),
+                    color: _getPaymentMethodColor().withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -3615,7 +3612,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   borderRadius: BorderRadius.circular(14),
                   boxShadow: [
                     BoxShadow(
-                      color: CupertinoColors.activeOrange.withOpacity(0.3),
+                      color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -3719,7 +3716,7 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 }
 
-// ============== TRACKING SCREEN ==============
+// ============== ENHANCED TRACKING SCREEN WITH REALISTIC DELIVERY ==============
 
 class TrackingScreen extends StatefulWidget {
   final String orderId;
@@ -3730,9 +3727,9 @@ class TrackingScreen extends StatefulWidget {
   State<TrackingScreen> createState() => _TrackingScreenState();
 }
 
-class _TrackingScreenState extends State<TrackingScreen> {
+class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProviderStateMixin {
   final MapController _mapController = MapController();
-  LatLng _riderLocation = const LatLng(14.5895, 120.9742); // Rider start
+  LatLng _riderLocation = const LatLng(14.5895, 120.9742); // Rider start (restaurant location)
   late LatLng _destination;
   List<LatLng> _path = [];
   int _currentPathIndex = 0;
@@ -3740,15 +3737,35 @@ class _TrackingScreenState extends State<TrackingScreen> {
   OrderStatus _currentStatus = OrderStatus.confirmed;
   final ordersBox = Hive.box<Order>("orders");
 
+  // Enhanced tracking variables
   int _totalDistance = 0;
   int _estimatedDuration = 0;
+  int _remainingDistance = 0;
+  int _remainingTime = 0;
   bool _isLoading = true;
   String _deliveryAddress = "";
   String _errorMessage = "";
+  String _riderName = "John Dela Cruz"; // Mock rider name
+  String _riderPhone = "0917-123-4567"; // Mock rider phone
+  double _riderRating = 4.8;
+  List<LatLng> _trafficPoints = [];
+  bool _isHeavyTraffic = false;
+  double _progress = 0.0;
+
+  // For smoother animation
+  late AnimationController _bounceController;
+  bool _isAnimating = false;
+
+  // For arrival popup
+  bool _showArrivalPopup = false;
 
   @override
   void initState() {
     super.initState();
+    _bounceController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    )..repeat(reverse: true);
     _loadOrder();
   }
 
@@ -3776,42 +3793,30 @@ class _TrackingScreenState extends State<TrackingScreen> {
         _deliveryAddress = order.deliveryAddress;
         _currentStatus = order.status;
 
+        // Set initial map view to show both rider and destination
         Future.delayed(const Duration(milliseconds: 300), () {
-          _mapController.move(_destination, 14);
+          _mapController.move(
+            LatLng(
+              (_riderLocation.latitude + _destination.latitude) / 2,
+              (_riderLocation.longitude + _destination.longitude) / 2,
+            ),
+            12, // Zoom out to show both locations
+          );
         });
 
-        await _calculatePath();
+        await _calculateRealisticRoute();
       } else {
         print("❌ ORDER NOT FOUND IN DATABASE");
-        print("   Available orders: ${ordersBox.keys.toList()}");
-
-        final allOrders = ordersBox.values.toList();
-        if (allOrders.isNotEmpty) {
-          final latestOrder = allOrders.last;
-          print("   Using most recent order: ${latestOrder.id}");
-          _destination = LatLng(latestOrder.deliveryLat, latestOrder.deliveryLng);
-          _deliveryAddress = latestOrder.deliveryAddress;
-          _currentStatus = latestOrder.status;
-
-          Future.delayed(const Duration(milliseconds: 300), () {
-            _mapController.move(_destination, 14);
-          });
-
-          await _calculatePath();
-        } else {
-          setState(() {
-            _errorMessage = "No orders found. Please place an order first.";
-            _destination = const LatLng(14.5995, 120.9842);
-            _deliveryAddress = "No orders yet";
-          });
-        }
+        setState(() {
+          _errorMessage = "Order not found. Please check your orders.";
+          _destination = const LatLng(14.5995, 120.9842);
+        });
       }
     } catch (e) {
       print("❌ ERROR loading order: $e");
       setState(() {
         _errorMessage = "Error loading order: $e";
         _destination = const LatLng(14.5995, 120.9842);
-        _deliveryAddress = "Error loading location";
       });
     }
 
@@ -3819,33 +3824,115 @@ class _TrackingScreenState extends State<TrackingScreen> {
       _isLoading = false;
     });
 
-    _startStatusTimer();
+    _startStatusSimulation();
     print("====================================");
   }
 
-  Future<void> _calculatePath() async {
+  Future<void> _calculateRealisticRoute() async {
     try {
+      // Get actual route from Geoapify
       final routeData = await GeoapifyService.getRoute(_riderLocation, _destination);
 
       setState(() {
         _path = routeData['route'];
         _totalDistance = routeData['distance'].round();
         _estimatedDuration = routeData['time'].round();
+        _remainingDistance = _totalDistance;
+        _remainingTime = _estimatedDuration;
+
+        // Generate random traffic points along the route
+        _generateTrafficPoints();
       });
 
-      print("✅ ROUTE CALCULATED");
+      print("✅ REALISTIC ROUTE CALCULATED");
       print("   Distance: ${_totalDistance}m");
       print("   Duration: ${_estimatedDuration}s");
+      print("   Path points: ${_path.length}");
     } catch (e) {
       print("❌ ERROR calculating route: $e");
+      // Fallback to road-like path if API fails
+      _path = _generateRoadLikePath(_riderLocation, _destination);
+      setState(() {
+        _totalDistance = 5000; // Default distance
+        _estimatedDuration = 900; // Default time
+        _remainingDistance = _totalDistance;
+        _remainingTime = _estimatedDuration;
+        _generateTrafficPoints();
+      });
     }
   }
 
-  void _startStatusTimer() {
-    Timer(const Duration(minutes: 1), () async {
+  // Generate a path that follows road-like patterns (curves and turns)
+  List<LatLng> _generateRoadLikePath(LatLng start, LatLng end) {
+    final path = <LatLng>[start];
+
+    double latDiff = end.latitude - start.latitude;
+    double lngDiff = end.longitude - start.longitude;
+
+    // Create a path that simulates following roads with turns
+    int segments = 40; // More segments for smoother path
+
+    for (int i = 1; i <= segments; i++) {
+      double fraction = i / segments;
+
+      // Base interpolation
+      double lat = start.latitude + (latDiff * fraction);
+      double lng = start.longitude + (lngDiff * fraction);
+
+      // Add road-like curves using multiple sine waves
+      double curve1 = 0.002 * sin(fraction * 4 * pi);
+      double curve2 = 0.0015 * cos(fraction * 3 * pi + 0.5);
+      double curve3 = 0.001 * sin(fraction * 2 * pi + 1.2);
+
+      // Combine curves for more natural road pattern
+      lat += curve1 + curve2;
+      lng += curve2 + curve3;
+
+      // Add occasional turns (simulating intersections)
+      if (i % 8 == 0) {
+        lat += 0.001 * (i % 3 == 0 ? 1 : -1);
+        lng += 0.001 * (i % 2 == 0 ? 1 : -1);
+      }
+
+      path.add(LatLng(lat, lng));
+    }
+
+    return path;
+  }
+
+  void _generateTrafficPoints() {
+    // Randomly mark some points as traffic-heavy areas
+    _trafficPoints.clear();
+    if (_path.isEmpty) return;
+
+    Random random = Random();
+    int trafficCount = random.nextInt(5) + 3; // 3-8 traffic points
+
+    for (int i = 0; i < trafficCount; i++) {
+      int index = random.nextInt(_path.length - 10) + 5;
+      _trafficPoints.add(_path[index]);
+    }
+  }
+
+  void _startStatusSimulation() {
+    // Simulate status changes with realistic timing
+    Timer(const Duration(seconds: 5), () async {
       if (_currentStatus == OrderStatus.confirmed) {
+        setState(() => _currentStatus = OrderStatus.preparing);
+
+        final order = ordersBox.get(widget.orderId);
+        if (order != null) {
+          order.status = OrderStatus.preparing;
+          await ordersBox.put(order.id, order);
+          print("✅ ORDER STATUS UPDATED TO: PREPARING");
+        }
+      }
+    });
+
+    Timer(const Duration(seconds: 15), () async {
+      if (_currentStatus == OrderStatus.preparing) {
         setState(() => _currentStatus = OrderStatus.onTheWay);
-        _startMovementSimulation();
+        _startRealisticMovement();
 
         final order = ordersBox.get(widget.orderId);
         if (order != null) {
@@ -3857,30 +3944,211 @@ class _TrackingScreenState extends State<TrackingScreen> {
     });
   }
 
-  void _startMovementSimulation() {
-    _movementTimer = Timer.periodic(const Duration(seconds: 2), (timer) async {
-      if (_currentPathIndex < _path.length - 1) {
-        setState(() {
-          _currentPathIndex++;
-          _riderLocation = _path[_currentPathIndex];
-        });
-      } else {
-        timer.cancel();
-        setState(() => _currentStatus = OrderStatus.delivered);
+  void _startRealisticMovement() {
+    if (_path.isEmpty) return;
 
-        final order = ordersBox.get(widget.orderId);
-        if (order != null) {
-          order.status = OrderStatus.delivered;
-          await ordersBox.put(order.id, order);
-          print("✅ ORDER STATUS UPDATED TO: DELIVERED");
+    const baseInterval = Duration(milliseconds: 600);
+    int steps = _path.length;
+    int currentStep = 0;
+
+    _movementTimer = Timer.periodic(baseInterval, (timer) {
+      if (currentStep < steps - 1) {
+        // Check if next segment has traffic
+        bool nextSegmentHasTraffic = false;
+        if (currentStep + 5 < steps) {
+          for (var trafficPoint in _trafficPoints) {
+            // Calculate distance manually since distanceTo() doesn't exist
+            double latDiff = (_path[currentStep + 5].latitude - trafficPoint.latitude).abs();
+            double lngDiff = (_path[currentStep + 5].longitude - trafficPoint.longitude).abs();
+
+            // Rough approximation of distance (in degrees)
+            if (latDiff < 0.001 && lngDiff < 0.001) {
+              nextSegmentHasTraffic = true;
+              break;
+            }
+          }
         }
+
+        // Simulate traffic by occasionally skipping a step (slowing down)
+        if (nextSegmentHasTraffic && Random().nextDouble() > 0.7) {
+          setState(() {
+            _isHeavyTraffic = true;
+          });
+          // Skip this update to simulate slowdown
+          return;
+        }
+
+        setState(() {
+          _isHeavyTraffic = false;
+          currentStep++;
+          _currentPathIndex = currentStep;
+          _riderLocation = _path[currentStep];
+
+          // Update progress and remaining distance
+          _progress = currentStep / (steps - 1);
+          _remainingDistance = _totalDistance - (_totalDistance * _progress).round();
+          _remainingTime = _estimatedDuration - (_estimatedDuration * _progress).round();
+
+          // Smoothly follow the rider with map updates
+          if (currentStep > steps * 0.7 || currentStep % 5 == 0) {
+            _mapController.move(_riderLocation, 15);
+          }
+        });
+
+        // Randomly show traffic notification
+        if (_isHeavyTraffic && currentStep % 3 == 0) {
+          _showTrafficNotification();
+        }
+      } else {
+        // Arrived at destination
+        timer.cancel();
+        _handleArrival();
       }
     });
+  }
+
+  void _handleArrival() {
+    // Show arrival popup
+    setState(() {
+      _showArrivalPopup = true;
+      _remainingDistance = 0;
+      _remainingTime = 0;
+    });
+
+    // Auto-dismiss popup after 4 seconds
+    Future.delayed(const Duration(seconds: 4), () {
+      if (mounted) {
+        setState(() {
+          _showArrivalPopup = false;
+        });
+      }
+    });
+
+    // Update status to delivered
+    Future.delayed(const Duration(seconds: 2), () async {
+      setState(() => _currentStatus = OrderStatus.delivered);
+
+      final order = ordersBox.get(widget.orderId);
+      if (order != null) {
+        order.status = OrderStatus.delivered;
+        await ordersBox.put(order.id, order);
+        print("✅ ORDER STATUS UPDATED TO: DELIVERED");
+
+        // Show delivery complete dialog
+        _showDeliveryCompleteDialog();
+      }
+    });
+  }
+
+  void _showTrafficNotification() {
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            Icon(Icons.traffic, color: CupertinoColors.white, size: 20),
+            const SizedBox(width: 8),
+            const Expanded(child: Text('Light traffic ahead, ETA adjusted')),
+          ],
+        ),
+        backgroundColor: CupertinoColors.activeOrange,
+        duration: const Duration(seconds: 2),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+    );
+  }
+
+  void _showDeliveryCompleteDialog() {
+    showCupertinoDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => CupertinoAlertDialog(
+        title: Container(
+          padding: const EdgeInsets.all(12),
+          child: const Icon(
+            Icons.check_circle,
+            color: CupertinoColors.activeGreen,
+            size: 60,
+          ),
+        ),
+        content: const Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Order Delivered!',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 12),
+            Text(
+              'Your order has arrived. Enjoy your meal!',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 14),
+            ),
+            SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star, color: CupertinoColors.systemYellow, size: 20),
+                SizedBox(width: 4),
+                Text('Rate your delivery', style: TextStyle(fontSize: 13)),
+              ],
+            ),
+          ],
+        ),
+        actions: [
+          CupertinoDialogAction(
+            isDefaultAction: true,
+            child: const Text('Rate 5 ★'),
+            onPressed: () {
+              Navigator.pop(context);
+              _showThankYouDialog();
+            },
+          ),
+          CupertinoDialogAction(
+            child: const Text('Later'),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showThankYouDialog() {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        content: const Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.thumb_up_alt, color: CupertinoColors.activeOrange, size: 40),
+            SizedBox(height: 12),
+            Text(
+              'Thank you for rating!',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
+            SizedBox(height: 8),
+            Text('Your feedback helps us improve', style: TextStyle(fontSize: 13)),
+          ],
+        ),
+        actions: [
+          CupertinoDialogAction(
+            child: const Text('Close'),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
   void dispose() {
     _movementTimer?.cancel();
+    _bounceController.dispose();
     super.dispose();
   }
 
@@ -3888,10 +4156,56 @@ class _TrackingScreenState extends State<TrackingScreen> {
     switch (_currentStatus) {
       case OrderStatus.confirmed: return 'Order Confirmed';
       case OrderStatus.preparing: return 'Preparing your order';
-      case OrderStatus.onTheWay: return 'Delivery is on the way';
+      case OrderStatus.onTheWay: return 'Rider is on the way';
       case OrderStatus.delivered: return 'Delivered';
       default: return 'Processing';
     }
+  }
+
+  String getStatusDescription() {
+    switch (_currentStatus) {
+      case OrderStatus.confirmed: return 'Restaurant has confirmed your order';
+      case OrderStatus.preparing: return 'Restaurant is preparing your food';
+      case OrderStatus.onTheWay: return 'Your rider is heading to your location';
+      case OrderStatus.delivered: return 'Order has been delivered';
+      default: return 'Processing your order';
+    }
+  }
+
+  IconData getStatusIcon() {
+    switch (_currentStatus) {
+      case OrderStatus.confirmed: return CupertinoIcons.check_mark_circled_solid;
+      case OrderStatus.preparing: return CupertinoIcons.clock_solid;
+      case OrderStatus.onTheWay: return Icons.delivery_dining;
+      case OrderStatus.delivered: return Icons.check_circle;
+      default: return CupertinoIcons.question_circle;
+    }
+  }
+
+  Color getStatusColor() {
+    switch (_currentStatus) {
+      case OrderStatus.confirmed: return CupertinoColors.activeBlue;
+      case OrderStatus.preparing: return CupertinoColors.activeOrange;
+      case OrderStatus.onTheWay: return CupertinoColors.activeOrange;
+      case OrderStatus.delivered: return CupertinoColors.systemGreen;
+      default: return CupertinoColors.systemGrey;
+    }
+  }
+
+  String formatDuration(int seconds) {
+    if (seconds < 60) return '${seconds} sec';
+    if (seconds < 3600) {
+      int minutes = (seconds / 60).round();
+      return '$minutes min';
+    }
+    int hours = (seconds / 3600).round();
+    int minutes = ((seconds % 3600) / 60).round();
+    return '$hours h $minutes min';
+  }
+
+  String formatDistance(int meters) {
+    if (meters < 1000) return '${meters}m';
+    return '${(meters / 1000).toStringAsFixed(1)} km';
   }
 
   @override
@@ -3901,293 +4215,883 @@ class _TrackingScreenState extends State<TrackingScreen> {
       navigationBar: CupertinoNavigationBar(
         backgroundColor: CupertinoColors.white,
         middle: const Text('Track Order', style: TextStyle(fontWeight: FontWeight.w600)),
-        // Add back button to navigation bar
         leading: CupertinoNavigationBarBackButton(
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      child: _isLoading
-          ? const Center(child: CupertinoActivityIndicator())
-          : Column(
+      child: Stack(
         children: [
-          // Status Card
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: CupertinoColors.white,
-              border: Border(bottom: BorderSide(color: CupertinoColors.systemGrey5, width: 1)),
-            ),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: CupertinoColors.activeOrange.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Icon(
-                        _currentStatus == OrderStatus.delivered
-                            ? CupertinoIcons.check_mark_circled_solid
-                            : _currentStatus == OrderStatus.onTheWay
-                            ? CupertinoIcons.car
-                            : CupertinoIcons.clock,
-                        color: CupertinoColors.activeOrange,
-                      ),
+          _isLoading
+              ? const Center(child: CupertinoActivityIndicator())
+              : Column(
+            children: [
+              // Enhanced Status Card with Rider Info
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: CupertinoColors.white,
+                  border: Border(
+                    bottom: BorderSide(
+                      color: CupertinoColors.systemGrey5.withValues(alpha: 0.5),
+                      width: 1,
                     ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    // Status Row
+                    Row(
+                      children: [
+                        // Animated Status Icon
+                        AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: getStatusColor().withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          child: Icon(
+                            getStatusIcon(),
+                            color: getStatusColor(),
+                            size: 24,
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                getStatusText(),
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                getStatusDescription(),
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: CupertinoColors.systemGrey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    // Rider Info (when on the way or delivered)
+                    if (_currentStatus == OrderStatus.onTheWay || _currentStatus == OrderStatus.delivered) ...[
+                      const SizedBox(height: 16),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: CupertinoColors.systemGrey6,
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                        child: Row(
+                          children: [
+                            // Rider Avatar
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: CupertinoColors.activeOrange.withValues(alpha: 0.2),
+                                shape: BoxShape.circle,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  _riderName.split(' ').map((e) => e[0]).join(''),
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: CupertinoColors.activeOrange,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            // Rider Details
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        _riderName,
+                                        style: const TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 6,
+                                          vertical: 2,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: CupertinoColors.systemYellow.withValues(alpha: 0.2),
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.star,
+                                              size: 12,
+                                              color: CupertinoColors.systemYellow,
+                                            ),
+                                            const SizedBox(width: 2),
+                                            Text(
+                                              _riderRating.toString(),
+                                              style: const TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        CupertinoIcons.phone,
+                                        size: 12,
+                                        color: CupertinoColors.systemGrey,
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        _riderPhone,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: CupertinoColors.systemGrey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            // Contact Button
+                            Container(
+                              decoration: BoxDecoration(
+                                color: CupertinoColors.activeOrange,
+                                shape: BoxShape.circle,
+                              ),
+                              child: CupertinoButton(
+                                padding: const EdgeInsets.all(10),
+                                onPressed: () {
+                                  // In a real app, this would open phone/chat
+                                  _showContactDialog();
+                                },
+                                child: const Icon(
+                                  CupertinoIcons.chat_bubble_text_fill,
+                                  color: CupertinoColors.white,
+                                  size: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    // Progress Bar with ETA
+                    if (_currentStatus == OrderStatus.onTheWay && _path.isNotEmpty) ...[
+                      const SizedBox(height: 16),
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(getStatusText(), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                          const SizedBox(height: 4),
-                          Text(
-                            _currentStatus == OrderStatus.delivered
-                                ? 'Your order has been delivered'
-                                : _currentStatus == OrderStatus.onTheWay
-                                ? 'Your rider is on the way'
-                                : 'Restaurant is preparing your order',
-                            style: TextStyle(fontSize: 12, color: CupertinoColors.systemGrey),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  if (_isHeavyTraffic)
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 6,
+                                        vertical: 2,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: CupertinoColors.destructiveRed.withValues(alpha: 0.1),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.traffic,
+                                            size: 12,
+                                            color: CupertinoColors.destructiveRed,
+                                          ),
+                                          const SizedBox(width: 4),
+                                          Text(
+                                            'Heavy Traffic',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              color: CupertinoColors.destructiveRed,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                ],
+                              ),
+                              Text(
+                                '${(_progress * 100).toInt()}%',
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  color: CupertinoColors.activeOrange,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: LinearProgressIndicator(
+                              value: _progress,
+                              backgroundColor: CupertinoColors.systemGrey5,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                _isHeavyTraffic
+                                    ? CupertinoColors.destructiveRed
+                                    : CupertinoColors.activeOrange,
+                              ),
+                              minHeight: 6,
+                            ),
                           ),
                         ],
                       ),
-                    ),
-                  ],
-                ),
+                    ],
 
-                // Delivery Address
-                if (_deliveryAddress.isNotEmpty && _deliveryAddress != "No orders yet") ...[
-                  const SizedBox(height: 12),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.systemGrey6,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Row(
-                      children: [
-                        const Icon(CupertinoIcons.location_fill, size: 14, color: CupertinoColors.activeOrange),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Text(
-                            _deliveryAddress,
-                            style: const TextStyle(fontSize: 12, color: CupertinoColors.black),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-
-                // Error message
-                if (_errorMessage.isNotEmpty) ...[
-                  const SizedBox(height: 12),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.destructiveRed.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Row(
-                      children: [
-                        const Icon(CupertinoIcons.exclamationmark_triangle, size: 14, color: CupertinoColors.destructiveRed),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Text(
-                            _errorMessage,
-                            style: const TextStyle(fontSize: 12, color: CupertinoColors.destructiveRed),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-
-                // Route Details
-                if (!_isLoading && _currentStatus != OrderStatus.delivered && _totalDistance > 0) ...[
-                  const SizedBox(height: 12),
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.systemGrey6,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          children: [
-                            const Icon(CupertinoIcons.map, size: 16, color: CupertinoColors.activeOrange),
-                            const SizedBox(height: 4),
-                            Text('Distance', style: TextStyle(fontSize: 10, color: CupertinoColors.systemGrey)),
-                            Text(
-                              GeoapifyService._formatDistance(_totalDistance),
-                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: CupertinoColors.black),
+                    // ETA and Distance
+                    if (_currentStatus == OrderStatus.onTheWay) ...[
+                      const SizedBox(height: 12),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: CupertinoColors.systemGrey6,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                children: [
+                                  const Icon(
+                                    CupertinoIcons.time,
+                                    size: 20,
+                                    color: CupertinoColors.activeOrange,
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'ETA',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      color: CupertinoColors.systemGrey,
+                                    ),
+                                  ),
+                                  Text(
+                                    formatDuration(_remainingTime),
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ],
-                        ),
-                        Container(height: 30, width: 1, color: CupertinoColors.systemGrey5),
-                        Column(
-                          children: [
-                            const Icon(CupertinoIcons.time, size: 16, color: CupertinoColors.activeOrange),
-                            const SizedBox(height: 4),
-                            Text('Est. Time', style: TextStyle(fontSize: 10, color: CupertinoColors.systemGrey)),
-                            Text(
-                              GeoapifyService._formatDuration(_estimatedDuration),
-                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: CupertinoColors.black),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Container(
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                color: CupertinoColors.systemGrey6,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                children: [
+                                  const Icon(
+                                    CupertinoIcons.map,
+                                    size: 20,
+                                    color: CupertinoColors.activeOrange,
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'Distance',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      color: CupertinoColors.systemGrey,
+                                    ),
+                                  ),
+                                  Text(
+                                    formatDistance(_remainingDistance),
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ],
-            ),
-          ),
+                          ),
+                        ],
+                      ),
+                    ],
 
-          // Map
-          Expanded(
-            child: FlutterMap(
-              mapController: _mapController,
-              options: MapOptions(
-                center: _destination,
-                zoom: 14,
-              ),
-              children: [
-                TileLayer(
-                  urlTemplate: 'https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=${ApiKeys.geoapifyKey}',
-                  userAgentPackageName: 'com.example.food_delivery',
-                ),
-                PolylineLayer(
-                  polylines: [
-                    Polyline(
-                      points: _path,
-                      color: CupertinoColors.activeGreen,
-                      strokeWidth: 5,
-                    ),
-                  ],
-                ),
-                MarkerLayer(
-                  markers: [
-                    // Rider Marker
-                    Marker(
-                      point: _riderLocation,
-                      width: 40,
-                      height: 40,
-                      child: Container(
+                    // Delivery Address
+                    if (_deliveryAddress.isNotEmpty && _deliveryAddress != "No orders yet") ...[
+                      const SizedBox(height: 12),
+                      Container(
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: CupertinoColors.white,
-                          shape: BoxShape.circle,
-                          border: Border.all(color: CupertinoColors.activeOrange, width: 2),
-                          boxShadow: [
-                            BoxShadow(
-                              color: CupertinoColors.activeOrange.withOpacity(0.3),
-                              blurRadius: 4,
-                              offset: const Offset(0, 2),
+                          color: CupertinoColors.systemGrey6,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              CupertinoIcons.location_fill,
+                              size: 16,
+                              color: CupertinoColors.activeOrange,
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                _deliveryAddress,
+                                style: const TextStyle(
+                                  fontSize: 13,
+                                  color: CupertinoColors.black,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                           ],
-                        ),
-                        child: const Icon(
-                          Icons.delivery_dining,
-                          color: CupertinoColors.activeOrange,
-                          size: 24,
                         ),
                       ),
+                    ],
+
+                    // Error message if any
+                    if (_errorMessage.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: CupertinoColors.destructiveRed.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              CupertinoIcons.exclamationmark_triangle,
+                              size: 14,
+                              color: CupertinoColors.destructiveRed,
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                _errorMessage,
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                  color: CupertinoColors.destructiveRed,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+
+              // Map
+              Expanded(
+                child: Stack(
+                  children: [
+                    FlutterMap(
+                      mapController: _mapController,
+                      options: MapOptions(
+                        center: _destination,
+                        zoom: 14,
+                        interactiveFlags: InteractiveFlag.all,
+                      ),
+                      children: [
+                        TileLayer(
+                          urlTemplate: 'https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=${ApiKeys.geoapifyKey}',
+                          userAgentPackageName: 'com.example.food_delivery',
+                        ),
+
+                        // Full Route (in light color)
+                        if (_path.isNotEmpty)
+                          PolylineLayer(
+                            polylines: [
+                              Polyline(
+                                points: _path,
+                                color: CupertinoColors.systemGrey.withValues(alpha: 0.3),
+                                strokeWidth: 4,
+                              ),
+                            ],
+                          ),
+
+                        // Traveled Path (in orange)
+                        if (_path.isNotEmpty && _currentPathIndex > 0)
+                          PolylineLayer(
+                            polylines: [
+                              Polyline(
+                                points: _path.sublist(0, _currentPathIndex + 1),
+                                color: _currentStatus == OrderStatus.delivered
+                                    ? CupertinoColors.systemGreen
+                                    : CupertinoColors.activeOrange,
+                                strokeWidth: 6,
+                              ),
+                            ],
+                          ),
+
+                        // Traffic Points
+                        if (_trafficPoints.isNotEmpty && _currentStatus == OrderStatus.onTheWay)
+                          MarkerLayer(
+                            markers: _trafficPoints.map((point) {
+                              return Marker(
+                                point: point,
+                                width: 30,
+                                height: 30,
+                                child: const Icon(
+                                  Icons.traffic,
+                                  color: CupertinoColors.destructiveRed,
+                                  size: 24,
+                                ),
+                              );
+                            }).toList(),
+                          ),
+
+                        // Markers
+                        MarkerLayer(
+                          markers: [
+                            // Rider Marker (with bounce animation)
+                            Marker(
+                              point: _riderLocation,
+                              width: 60,
+                              height: 60,
+                              child: AnimatedBuilder(
+                                animation: _bounceController,
+                                builder: (context, child) {
+                                  return Transform.translate(
+                                    offset: Offset(0, -5 * _bounceController.value),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: CupertinoColors.white,
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: _currentStatus == OrderStatus.delivered
+                                              ? CupertinoColors.systemGreen
+                                              : CupertinoColors.activeOrange,
+                                          width: 3,
+                                        ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: (_currentStatus == OrderStatus.delivered
+                                                ? CupertinoColors.systemGreen
+                                                : CupertinoColors.activeOrange).withValues(alpha: 0.3),
+                                            blurRadius: 12,
+                                            spreadRadius: 2,
+                                          ),
+                                        ],
+                                      ),
+                                      child: Center(
+                                        child: Icon(
+                                          _currentStatus == OrderStatus.delivered
+                                              ? Icons.check_circle
+                                              : Icons.delivery_dining,
+                                          color: _currentStatus == OrderStatus.delivered
+                                              ? CupertinoColors.systemGreen
+                                              : CupertinoColors.activeOrange,
+                                          size: 30,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+
+                            // Destination Marker
+                            Marker(
+                              point: _destination,
+                              width: 70,
+                              height: 80,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 6,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: CupertinoColors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: CupertinoColors.systemGrey.withValues(alpha: 0.3),
+                                          blurRadius: 4,
+                                          offset: const Offset(0, 2),
+                                        ),
+                                      ],
+                                    ),
+                                    child: const Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(
+                                          Icons.location_on,
+                                          size: 14,
+                                          color: CupertinoColors.systemGreen,
+                                        ),
+                                        SizedBox(width: 4),
+                                        Text(
+                                          'You',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: CupertinoColors.systemGreen,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Icon(
+                                    Icons.location_pin,
+                                    color: CupertinoColors.systemGreen,
+                                    size: 40,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    // Destination Marker (Pinned Location)
-                    Marker(
-                      point: _destination,
-                      width: 50,
-                      height: 50,
+
+                    // Zoom Controls
+                    Positioned(
+                      bottom: 20,
+                      right: 16,
                       child: Column(
                         children: [
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
                               color: CupertinoColors.white,
                               borderRadius: BorderRadius.circular(12),
                               boxShadow: [
                                 BoxShadow(
-                                  color: CupertinoColors.systemGrey.withOpacity(0.2),
-                                  blurRadius: 4,
+                                  color: CupertinoColors.systemGrey.withValues(alpha: 0.2),
+                                  blurRadius: 8,
                                   offset: const Offset(0, 2),
                                 ),
                               ],
                             ),
-                            child: const Text(
-                              'You',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold,
-                                color: CupertinoColors.systemGreen,
-                              ),
+                            child: Column(
+                              children: [
+                                CupertinoButton(
+                                  padding: const EdgeInsets.all(12),
+                                  onPressed: () {
+                                    _mapController.move(
+                                      _mapController.camera.center,
+                                      _mapController.camera.zoom + 1,
+                                    );
+                                  },
+                                  child: const Icon(
+                                    CupertinoIcons.plus,
+                                    size: 20,
+                                    color: CupertinoColors.activeOrange,
+                                  ),
+                                ),
+                                Container(
+                                  height: 1,
+                                  width: 30,
+                                  color: CupertinoColors.systemGrey5,
+                                ),
+                                CupertinoButton(
+                                  padding: const EdgeInsets.all(12),
+                                  onPressed: () {
+                                    _mapController.move(
+                                      _mapController.camera.center,
+                                      _mapController.camera.zoom - 1,
+                                    );
+                                  },
+                                  child: const Icon(
+                                    CupertinoIcons.minus,
+                                    size: 20,
+                                    color: CupertinoColors.activeOrange,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          const Icon(
-                            Icons.location_pin,
-                            color: CupertinoColors.systemGreen,
-                            size: 30,
+                          const SizedBox(height: 8),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: CupertinoColors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: CupertinoColors.systemGrey.withValues(alpha: 0.2),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
+                            ),
+                            child: CupertinoButton(
+                              padding: const EdgeInsets.all(12),
+                              onPressed: () {
+                                _mapController.move(
+                                  _riderLocation,
+                                  16,
+                                );
+                              },
+                              child: const Icon(
+                                Icons.my_location,
+                                size: 20,
+                                color: CupertinoColors.activeOrange,
+                              ),
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+
+              // Back to Menu Button
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        CupertinoColors.activeOrange,
+                        Color(0xFFFF9F0A),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(14),
+                    boxShadow: [
+                      BoxShadow(
+                        color: CupertinoColors.activeOrange.withValues(alpha: 0.3),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: CupertinoButton(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: const Text(
+                      'Back to Menu',
+                      style: TextStyle(
+                        color: CupertinoColors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.popUntil(context, (route) => route.isFirst);
+                    },
+                  ),
+                ),
+              ),
+            ],
           ),
 
-          // Back to Menu Button - Added at the bottom
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    CupertinoColors.systemIndigo,
-                    Color(0xFF5E5CE6),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(14),
-                boxShadow: [
-                  BoxShadow(
-                    color: CupertinoColors.systemIndigo.withOpacity(0.3),
-                    blurRadius: 12,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
-              ),
-              child: CupertinoButton(
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                child: const Text(
-                  'Back to Menu',
-                  style: TextStyle(
-                    color: CupertinoColors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                onPressed: () {
-                  // Navigate back to the home screen (menu tab)
-                  Navigator.popUntil(context, (route) => route.isFirst);
+          // Arrival Popup Overlay
+          if (_showArrivalPopup)
+            Positioned(
+              top: 100,
+              left: 20,
+              right: 20,
+              child: TweenAnimationBuilder(
+                duration: const Duration(milliseconds: 300),
+                tween: Tween<double>(begin: 0, end: 1),
+                curve: Curves.easeOutBack,
+                builder: (context, double value, child) {
+                  return Transform.scale(
+                    scale: value,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: CupertinoColors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: CupertinoColors.systemGreen.withValues(alpha: 0.4),
+                              blurRadius: 20,
+                              spreadRadius: 2,
+                            ),
+                          ],
+                          border: Border.all(
+                            color: CupertinoColors.systemGreen,
+                            width: 2,
+                          ),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.check_circle,
+                              color: CupertinoColors.systemGreen,
+                              size: 50,
+                            ),
+                            const SizedBox(height: 12),
+                            const Text(
+                              'Rider has arrived!',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: CupertinoColors.systemGreen,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              '$_riderName is at your location',
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: CupertinoColors.black,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: CupertinoColors.systemGreen.withValues(alpha: 0.1),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: CupertinoButton(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 20,
+                                      vertical: 8,
+                                    ),
+                                    onPressed: () {
+                                      // In a real app, this would call the rider
+                                      setState(() {
+                                        _showArrivalPopup = false;
+                                      });
+                                    },
+                                    child: const Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Icon(
+                                          CupertinoIcons.phone,
+                                          size: 16,
+                                          color: CupertinoColors.systemGreen,
+                                        ),
+                                        SizedBox(width: 4),
+                                        Text(
+                                          'Contact Rider',
+                                          style: TextStyle(
+                                            color: CupertinoColors.systemGreen,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
                 },
               ),
             ),
+        ],
+      ),
+    );
+  }
+
+  void _showContactDialog() {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        title: const Text('Contact Rider'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(height: 8),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: CupertinoColors.systemGrey6,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(CupertinoIcons.phone, size: 16),
+                  const SizedBox(width: 8),
+                  Text(_riderPhone),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          CupertinoDialogAction(
+            child: const Text('Call'),
+            onPressed: () {
+              Navigator.pop(context);
+              // In a real app, this would launch phone dialer
+              _showAlert('Calling $_riderName...');
+            },
+          ),
+          CupertinoDialogAction(
+            child: const Text('Message'),
+            onPressed: () {
+              Navigator.pop(context);
+              // In a real app, this would open messaging
+              _showAlert('Opening chat...');
+            },
+          ),
+          CupertinoDialogAction(
+            child: const Text('Cancel'),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showAlert(String message) {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) => CupertinoAlertDialog(
+        content: Text(message),
+        actions: [
+          CupertinoDialogAction(
+            child: const Text('OK'),
+            onPressed: () => Navigator.pop(context),
           ),
         ],
       ),
     );
   }
 }
-
 // ============== ORDERS SCREEN ==============
 
 class OrdersScreen extends StatefulWidget {
@@ -4213,7 +5117,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [CupertinoColors.activeOrange.withOpacity(0.05), const Color(0xFFF2F2F7)],
+            colors: [CupertinoColors.activeOrange.withValues(alpha: 0.05), const Color(0xFFF2F2F7)],
           ),
         ),
         child: ValueListenableBuilder(
@@ -4233,7 +5137,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
-                            color: CupertinoColors.systemGrey.withOpacity(0.1),
+                            color: CupertinoColors.systemGrey.withValues(alpha: 0.1),
                             blurRadius: 20,
                             offset: const Offset(0, 10),
                           ),
@@ -4288,7 +5192,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                 decoration: BoxDecoration(
-                                  color: _getStatusColor(order.status).withOpacity(0.1),
+                                  color: _getStatusColor(order.status).withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(8),
                                 ),
                                 child: Text(
@@ -4382,7 +5286,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
           ),
           child: Icon(icon, size: 18, color: color),
         ),
@@ -4407,7 +5311,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [CupertinoColors.activeOrange.withOpacity(0.05), const Color(0xFFF2F2F7)],
+            colors: [CupertinoColors.activeOrange.withValues(alpha: 0.05), const Color(0xFFF2F2F7)],
           ),
         ),
         child: SafeArea(
@@ -4434,7 +5338,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         borderRadius: BorderRadius.circular(14),
                         boxShadow: [
                           BoxShadow(
-                            color: CupertinoColors.activeOrange.withOpacity(0.08),
+                            color: CupertinoColors.activeOrange.withValues(alpha: 0.08),
                             blurRadius: 10,
                             offset: const Offset(0, 4),
                           ),
