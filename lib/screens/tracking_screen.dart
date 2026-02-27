@@ -10,7 +10,7 @@ import '../models/order.dart';
 import '../services/route_service.dart';
 import '../services/geoapify_service.dart';
 import '../utils/api_keys.dart';
-import 'home_screen.dart';
+import 'home_screen.dart'; // Add this import
 
 class TrackingScreen extends StatefulWidget {
   final String orderId;
@@ -48,9 +48,6 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
 
   late AnimationController _bounceController;
   bool _showArrivalPopup = false;
-
-  // Speed multiplier - INCREASE THIS TO MAKE DELIVERY FASTER
-  final double _speedMultiplier = 40.0; // 3x faster than original
 
   @override
   void initState() {
@@ -183,8 +180,7 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
   }
 
   void _startStatusSimulation() {
-    // FASTER: Reduced waiting times
-    Timer(const Duration(seconds: 2), () async { // Was 5 seconds
+    Timer(const Duration(seconds: 5), () async {
       if (_currentStatus == OrderStatus.confirmed) {
         setState(() => _currentStatus = OrderStatus.preparing);
 
@@ -196,7 +192,7 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
       }
     });
 
-    Timer(const Duration(seconds: 6), () async { // Was 15 seconds
+    Timer(const Duration(seconds: 15), () async {
       if (_currentStatus == OrderStatus.preparing) {
         setState(() => _currentStatus = OrderStatus.onTheWay);
         _startRealisticMovement();
@@ -213,19 +209,11 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
   void _startRealisticMovement() {
     if (_path.isEmpty) return;
 
-    // FASTER: Reduced interval based on speed multiplier
     const baseInterval = Duration(milliseconds: 600);
-    // Calculate faster interval
-    int fasterIntervalMs = (600 / _speedMultiplier).round();
-    final movementInterval = Duration(milliseconds: fasterIntervalMs);
-
     int steps = _path.length;
     int currentStep = 0;
 
-    print("🚀 Moving at ${_speedMultiplier}x speed");
-    print("   Interval: ${movementInterval.inMilliseconds}ms");
-
-    _movementTimer = Timer.periodic(movementInterval, (timer) {
+    _movementTimer = Timer.periodic(baseInterval, (timer) {
       if (currentStep < steps - 1) {
         bool nextSegmentHasTraffic = false;
         if (currentStep + 5 < steps) {
@@ -240,8 +228,7 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
           }
         }
 
-        // REDUCED traffic probability for faster delivery
-        if (nextSegmentHasTraffic && Random().nextDouble() > 0.9) { // Was 0.7
+        if (nextSegmentHasTraffic && Random().nextDouble() > 0.7) {
           setState(() {
             _isHeavyTraffic = true;
           });
@@ -256,19 +243,12 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
 
           _progress = currentStep / (steps - 1);
           _remainingDistance = _totalDistance - (_totalDistance * _progress).round();
-
-          // FASTER: Calculate remaining time based on speed multiplier
-          _remainingTime = ((_estimatedDuration - (_estimatedDuration * _progress)) / _speedMultiplier).round();
+          _remainingTime = _estimatedDuration - (_estimatedDuration * _progress).round();
 
           if (currentStep > steps * 0.7 || currentStep % 5 == 0) {
             _mapController.move(_riderLocation, 15);
           }
         });
-
-        // REDUCED traffic notifications
-        if (_isHeavyTraffic && currentStep % 5 == 0) { // Was % 3
-          _showTrafficNotification();
-        }
       } else {
         timer.cancel();
         _handleArrival();
@@ -277,15 +257,13 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
   }
 
   void _handleArrival() {
-    // Show arrival popup
     setState(() {
       _showArrivalPopup = true;
       _remainingDistance = 0;
       _remainingTime = 0;
     });
 
-    // Auto-dismiss popup faster
-    Future.delayed(const Duration(seconds: 2), () { // Was 4 seconds
+    Future.delayed(const Duration(seconds: 4), () {
       if (mounted) {
         setState(() {
           _showArrivalPopup = false;
@@ -293,43 +271,16 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
       }
     });
 
-    // Update status to delivered faster
-    Future.delayed(const Duration(seconds: 1), () async { // Was 2 seconds
+    Future.delayed(const Duration(seconds: 2), () async {
       setState(() => _currentStatus = OrderStatus.delivered);
 
       final order = ordersBox.get(widget.orderId);
       if (order != null) {
         order.status = OrderStatus.delivered;
         await ordersBox.put(order.id, order);
-
-        // Show delivery complete dialog after a short delay
-        Future.delayed(const Duration(milliseconds: 500), () {
-          if (mounted) {
-            _showDeliveryCompleteDialog();
-          }
-        });
+        _showDeliveryCompleteDialog();
       }
     });
-  }
-
-  void _showTrafficNotification() {
-    if (!mounted) return;
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Row(
-          children: [
-            Icon(Icons.traffic, color: CupertinoColors.white, size: 20),
-            const SizedBox(width: 8),
-            const Expanded(child: Text('Light traffic ahead, minor delay')),
-          ],
-        ),
-        backgroundColor: CupertinoColors.activeOrange,
-        duration: const Duration(seconds: 1), // Was 2 seconds
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      ),
-    );
   }
 
   void _showDeliveryCompleteDialog() {
@@ -709,7 +660,7 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
                                       ),
                                       const SizedBox(width: 4),
                                       Text(
-                                        'Light Traffic',
+                                        'Heavy Traffic',
                                         style: TextStyle(
                                           fontSize: 10,
                                           color: CupertinoColors.destructiveRed,
@@ -1124,7 +1075,7 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
                 ),
               ),
 
-              // Back to Menu Button
+              // Back to Menu Button - FIXED
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: Container(
@@ -1158,10 +1109,11 @@ class _TrackingScreenState extends State<TrackingScreen> with SingleTickerProvid
                       ),
                     ),
                     onPressed: () {
+                      // FIXED: Navigate to HomeScreen and remove all previous routes
                       Navigator.pushAndRemoveUntil(
                         context,
                         CupertinoPageRoute(builder: (context) => const HomeScreen()),
-                            (route) => false,
+                            (route) => false, // This removes all previous routes
                       );
                     },
                   ),
