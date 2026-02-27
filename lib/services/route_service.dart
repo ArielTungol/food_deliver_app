@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:food_delivery_app/utils/api_keys.dart';
+import 'package:latlong2/latlong.dart';
+import '../utils/api_keys.dart';
 
 class RouteService {
   static Future<List<LatLng>> getRoute(LatLng start, LatLng end) async {
@@ -11,8 +11,7 @@ class RouteService {
             'https://api.openrouteservice.org/v2/directions/driving-car?'
                 'api_key=${ApiKeys.orsApiKey}&'
                 'start=${start.longitude},${start.latitude}&'
-                'end=${end.longitude},${end.latitude}'
-        ),
+                'end=${end.longitude},${end.latitude}'),
       );
 
       if (response.statusCode == 200) {
@@ -34,8 +33,7 @@ class RouteService {
             'https://api.openrouteservice.org/v2/directions/driving-car?'
                 'api_key=${ApiKeys.orsApiKey}&'
                 'start=${start.longitude},${start.latitude}&'
-                'end=${end.longitude},${end.latitude}'
-        ),
+                'end=${end.longitude},${end.latitude}'),
       );
 
       if (response.statusCode == 200) {
@@ -52,16 +50,21 @@ class RouteService {
           'route': routePoints,
           'distance': summary['distance'], // in meters
           'duration': summary['duration'], // in seconds
+          'distance_formatted': formatDistance(summary['distance'].round()),
+          'time_formatted': formatDuration(summary['duration'].round()),
         };
       }
     } catch (e) {
       print('Error getting route details: $e');
     }
 
+    final simplePath = _getSimplePath(start, end);
     return {
-      'route': _getSimplePath(start, end),
+      'route': simplePath,
       'distance': 0,
       'duration': 0,
+      'distance_formatted': '0 km',
+      'time_formatted': '0 min',
     };
   }
 

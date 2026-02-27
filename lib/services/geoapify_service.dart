@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
+import '../utils/api_keys.dart';
 
 class GeoapifyService {
-  // Replace with your actual API key
-  static const String apiKey = 'YOUR_GEOAPIFY_API_KEY';
+  static const String apiKey = ApiKeys.geoapifyKey;
 
   // ============== GEOCODING (Address ↔ Coordinates) ==============
 
@@ -15,8 +15,7 @@ class GeoapifyService {
         Uri.parse(
             'https://api.geoapify.com/v1/geocode/search?'
                 'text=${Uri.encodeComponent(address)}&'
-                'apiKey=$apiKey&limit=1'
-        ),
+                'apiKey=$apiKey&limit=1'),
       );
 
       if (response.statusCode == 200) {
@@ -41,8 +40,7 @@ class GeoapifyService {
         Uri.parse(
             'https://api.geoapify.com/v1/geocode/search?'
                 'text=${Uri.encodeComponent(query)}&'
-                'apiKey=$apiKey&limit=5'
-        ),
+                'apiKey=$apiKey&limit=5'),
       );
 
       if (response.statusCode == 200) {
@@ -74,8 +72,7 @@ class GeoapifyService {
         Uri.parse(
             'https://api.geoapify.com/v1/geocode/reverse?'
                 'lat=${location.latitude}&lon=${location.longitude}&'
-                'apiKey=$apiKey&format=json'
-        ),
+                'apiKey=$apiKey&format=json'),
       );
 
       if (response.statusCode == 200) {
@@ -93,7 +90,7 @@ class GeoapifyService {
 
   // ============== PLACES API (Nearby places) ==============
 
-  /// Find nearby places (restaurants, cafes, etc.) [citation:1]
+  /// Find nearby places (restaurants, cafes, etc.)
   static Future<List<Map<String, dynamic>>> findNearbyPlaces(
       LatLng location, {
         String categories = 'catering.restaurant,catering.cafe,commercial.supermarket',
@@ -107,8 +104,7 @@ class GeoapifyService {
                 'filter=circle:${location.longitude},${location.latitude},$radius&'
                 'categories=$categories&'
                 'limit=$limit&'
-                'apiKey=$apiKey'
-        ),
+                'apiKey=$apiKey'),
       );
 
       if (response.statusCode == 200) {
@@ -134,7 +130,7 @@ class GeoapifyService {
 
   // ============== ROUTING API (Directions) ==============
 
-  /// Get route between two points [citation:3]
+  /// Get route between two points
   static Future<Map<String, dynamic>> getRoute(
       LatLng start,
       LatLng end, {
@@ -147,8 +143,7 @@ class GeoapifyService {
                 'waypoints=${start.longitude},${start.latitude}|${end.longitude},${end.latitude}&'
                 'mode=$mode&'
                 'apiKey=$apiKey&'
-                'geometry=true'
-        ),
+                'geometry=true'),
       );
 
       if (response.statusCode == 200) {
@@ -185,35 +180,6 @@ class GeoapifyService {
       'distance_formatted': '0 km',
       'time_formatted': '0 min',
     };
-  }
-
-  // ============== STATIC MAPS (for order tracking) ==============
-
-  /// Get a static map image URL [citation:7]
-  static String getStaticMapUrl(LatLng center, {
-    int zoom = 15,
-    int width = 600,
-    int height = 400,
-    String style = 'osm-bright',
-    List<Map<String, dynamic>>? markers,
-  }) {
-    String baseUrl = 'https://maps.geoapify.com/v1/staticmap?'
-        'style=$style&'
-        'width=$width&height=$height&'
-        'center=lonlat:${center.longitude},${center.latitude}&'
-        'zoom=$zoom&'
-        'apiKey=$apiKey';
-
-    // Add markers if provided
-    if (markers != null && markers.isNotEmpty) {
-      for (var marker in markers) {
-        baseUrl += '&marker=lonlat:${marker['lon']},${marker['lat']};'
-            'type:${marker['type'] ?? 'material'};'
-            'color:${marker['color'] ?? '%23ff6d00'}';
-      }
-    }
-
-    return baseUrl;
   }
 
   // ============== HELPER METHODS ==============
